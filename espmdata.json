@@ -1,0 +1,27 @@
+{
+  "language": "python",
+  "compile": false,
+  "version": "0.0.1",
+  "developer": "EdgeSoft",
+  "compilecommand": "",
+  "compiler": "",
+  "languageinstallcommands": [
+    ""
+  ],
+  "delfiles": [
+    "espmdata.json"
+  ],
+  "execute":
+  [
+    "sudo python3 -m venv caliumlite",
+    "source caliumlite/bin/activate",
+    "pip install pygame-ce",
+    "pip install pyinstaller",
+    "pyinstaller caliumlite.py --onefile",
+    "chmod +x dist/caliumlite",
+    "sudo mv dist/caliumlite /usr/local/bin",
+    "sudo chmod +x /usr/local/bin/caliumlite"
+  ],
+  "dependencies": [],
+  "description": "CaliumLite is a Pygame-Based Game Engine"
+}
